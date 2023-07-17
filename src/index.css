@@ -103,7 +103,7 @@ body {
   font-size: 6rem;
 }
 .summery {
-  width: 70%;
+  width: 65%;
   margin: 10px auto;
   text-align: left;
 }
@@ -115,4 +115,23 @@ body {
 .summery p {
   font-size: 0.8rem;
   font-weight: 200;
+}
+.wind {
+  width: 65%;
+  display: flex;
+  border-radius: 5px;
+  justify-content: space-evenly;
+  padding: 20px 5px;
+  background-color: #000000;
+  margin: 15px auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  color: #fddf7a;
+}
+.wind img {
+  width: 30px;
+  filter: invert(1);
+  margin: 5px 0;
+}
+.wind h6 {
+  margin: 5px 0;
 }
