@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+}
+body {
+  background-color: black;
+  color: #000000;
+  overflow-x: hidden;
+}
+.bg {
+  position: absolute;
+  top: 250px;
+  display: flex;
+  justify-content: space-between;
+  z-index: -1;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+.bg p {
+  color: white;
+  font-size: 1.8rem;
+}
+.main {
+  min-width: 300px;
+  width: 80%;
+  padding: 20px;
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #ffd95a;
+  border-radius: 10px;
+}
+.main .header {
+  color: #000000;
+  font-size: 1.2rem;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 10px 0;
+}
+.main .header span {
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+.main form {
+  text-align: center;
+}
+.main form input {
+  padding: 15px 5px 2px 2px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+  font-size: 1.1rem;
+  margin: 5px 10px;
+}
+.main form button {
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  color: #000000;
+  cursor: pointer;
+  padding: 5px 25px;
+}
+.container {
+  margin: 20px 0;
+  text-align: center;
+}
+.top {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: last center;
+}
+.container .location {
+  width: 20px;
+}
+.container .city {
+  margin: 5px 0;
+}
+.container .date {
+  background-color: #000000;
+  border-radius: 10px;
+  color: #ffd95a;
+  margin: 5px auto;
+  padding: 5px 10px;
+  width: 150px;
+}
+.container .icon {
+  display: block;
+  width: 60px;
+  margin: 5px auto;
+}
+.container .desc {
+  font-size: 0.8rem;
+}
+.container .temp {
+  font-size: 6rem;
+}
+.summery {
+  width: 70%;
+  margin: 10px auto;
+  text-align: left;
+}
+.summery h2 {
+  font-size: 1rem;
+  font-weight: 900;
+  margin: 10px 0;
+}
+.summery p {
+  font-size: 0.8rem;
+  font-weight: 200;
+}
