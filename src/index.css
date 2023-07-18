@@ -117,7 +117,7 @@ body {
   font-weight: 200;
 }
 .wind {
-  width: 65%;
+  width: 75%;
   display: flex;
   border-radius: 5px;
   justify-content: space-evenly;
@@ -134,4 +134,18 @@ body {
 }
 .wind h6 {
   margin: 5px 0;
+}
+.week-weather {
+  width: 75%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.week-card {
+  border: 1px solid #000000;
+  padding: 5px 5px;
+  text-align: center;
+  border-radius: 5px;
 }
