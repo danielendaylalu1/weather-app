@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import WeekCard from "./WeekCard";
 
 const WeekWeather = ({ data, date }) => {
   const [filterd, setFilterd] = useState([]);
@@ -25,32 +26,17 @@ const WeekWeather = ({ data, date }) => {
     });
   }, [data, date]);
   return (
-    <Slider {...settings} className="week-weather">
-      {filterd.length > 0 &&
-        filterd.map((obj) => {
-          if (obj.date !== num) {
-            num = obj.date;
-            return (
-              <div className="week-card" key={obj.date}>
-                <h1 className="temp">
-                  {Math.round(obj.main.temp - 273.15)}&#xB0;
-                </h1>
-                <img
-                  src={`https://openweathermap.org/img/wn/${obj.weather[0].icon}@2x.png`}
-                  alt="Weather icon"
-                  className="icon"
-                />
-                <h5 className="date">
-                  {new Date(obj.dt_txt).getDate()} -{" "}
-                  {new Date(obj.dt_txt).toLocaleString("en-US", {
-                    month: "long",
-                  })}
-                </h5>
-              </div>
-            );
-          }
-        })}
-    </Slider>
+    <>
+      <Slider {...settings} className="week-weather">
+        {filterd.length > 0 &&
+          filterd.map((obj) => {
+            if (obj.date !== num) {
+              num = obj.date;
+              return <WeekCard obj={obj} />;
+            }
+          })}
+      </Slider>
+    </>
   );
 };
 

@@ -11,6 +11,7 @@ function App() {
   const [city, setCity] = useState("");
   const [err, setErr] = useState(false);
   const [isFirst, setFirst] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const now = new Date();
   const date = now.getDate();
@@ -20,12 +21,14 @@ function App() {
 
   useEffect(() => {
     const weatherGeter = async () => {
+      setIsLoading(true);
       try {
         const res = await fetch(
           `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`
         );
         const weatherData = await res.json();
         setData(weatherData);
+        setIsLoading(false);
         setErr(false);
         if (weatherData.cod === "404") {
           setErr(true);
@@ -45,6 +48,7 @@ function App() {
       <div className="main">
         <Header />
         <Form setCity={setCity} setFirst={setFirst} />
+        {isLoading && <h4 className="loading">Loading ....</h4>}
         {!err ? (
           data.city && (
             <>

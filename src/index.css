@@ -157,3 +157,7 @@ body {
 .slick-list {
   margin: 0 -10px;
 }
+.loading {
+  text-align: center;
+  margin: 10px 0;
+}
