@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const WeekWeather = ({ data, date }) => {
   const [filterd, setFilterd] = useState([]);
   let num = 0;
-  // const [first, setFirst] = useState(true);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+  };
+
   useEffect(() => {
     setFilterd([]);
     data.map((obj) => {
@@ -15,8 +25,7 @@ const WeekWeather = ({ data, date }) => {
     });
   }, [data, date]);
   return (
-    <div className="week-weather">
-      {/* {console.log(filterd)} */}
+    <Slider {...settings} className="week-weather">
       {filterd.length > 0 &&
         filterd.map((obj) => {
           if (obj.date !== num) {
@@ -41,7 +50,7 @@ const WeekWeather = ({ data, date }) => {
             );
           }
         })}
-    </div>
+    </Slider>
   );
 };
 

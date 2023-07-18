@@ -139,8 +139,6 @@ body {
   width: 75%;
   margin: 10px auto;
   display: flex;
-  justify-content: center;
-  gap: 10px;
   flex-wrap: wrap;
 }
 .week-card {
@@ -148,4 +146,14 @@ body {
   padding: 5px 5px;
   text-align: center;
   border-radius: 5px;
+}
+.week-card .icon {
+  width: 60px;
+  margin: 5px auto;
+}
+.slick-slide > div {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px;
 }

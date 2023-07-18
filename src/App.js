@@ -30,10 +30,9 @@ function App() {
         if (weatherData.cod === "404") {
           setErr(true);
         }
-        // console.log(weatherData);
       } catch (err) {
         setErr(true);
-        // console.log(err);
+        console.log(err);
       }
     };
     if (!isFirst) {
